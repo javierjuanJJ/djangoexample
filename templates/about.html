@@ -10,5 +10,13 @@
     <p>
         {{ my_text }}, {{ my_number }}, {{ my_list }}
     </p>
+    <ul>
+    {% for my_item_list in my_list%}
+        <li>
+            {{ forloop.counter }} - {{ my_item_list }}
+        </li>
+    {% endfor %}
+    </ul>
+
 
 {% endblock %}
