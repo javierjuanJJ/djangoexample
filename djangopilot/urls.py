@@ -19,7 +19,7 @@ from proof.views import home_view
 from proof.views import contacts_view
 from proof.views import social_view
 from proof.views import about_view
-from products.views import product_detail_view
+from products.views import product_detail_view, product_create_view
 
 urlpatterns = [
     path('', home_view, name='home'),
@@ -27,5 +27,7 @@ urlpatterns = [
     path('social/', social_view, name='social'),
     path('about/', about_view, name='about'),
     path('product_detail_view/', product_detail_view, name='product_detail_view'),
+    path('product_create_view/', product_create_view, name='product_create_view'),
+
     path('admin/', admin.site.urls),
 ]
