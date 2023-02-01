@@ -4,14 +4,9 @@ from .forms import ProductForm
 # Create your views here.
 
 def product_create_view(request):
-    form = ProductForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        form = ProductForm()
-
-    context = {
-        'form': form
-    }
+    context = {}
+    if request.method == "POST":
+        title = request.POST.get('title')
     return render(request, "product/create.html", context)
 
 
