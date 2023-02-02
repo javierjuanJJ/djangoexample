@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'proof.apps.ProofConfig',
+    #'proof.apps.ProofConfig',
+    # own
+    'blog',
+    'courses',
+    'proof',
     'products',
 ]
 
